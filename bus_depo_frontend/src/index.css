@@ -1,0 +1,42 @@
+/* ─── global palette ─────────────────────────── */
+:root {
+  --brand:        #0d47a1; /* primary */
+  --brand-light:  #1565c0;
+  --surface:      #ffffff;
+  --surface-alt:  #f8f9fa;
+  --border:       #e2e6ea;
+  --radius-lg:    1rem;   /* 16 px */
+}
+
+/* body background */
+body { background: var(--surface-alt); }
+
+/* cards */
+.card {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* brand buttons */
+.btn-brand {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn-brand:hover,
+.btn-brand:focus { background: var(--brand-light); border-color: var(--brand-light); }
+
+/* pill buttons */
+.btn-pill { border-radius: 999rem !important; }
+
+/* tiny icon buttons (edit / trash) */
+.btn-icon {
+  width: 28px; height: 28px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn-icon i { font-size: 15px; line-height: 1; }
+
+/* sticky profile offset under fixed navbar */
+@media (min-width: 992px) {
+  .sticky-profile { top: 96px; }
+}

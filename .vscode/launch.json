@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BusDepoApplication<bus_depo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.wande.bus_depo_backend.BusDepoApplication",
+            "projectName": "bus_depo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
