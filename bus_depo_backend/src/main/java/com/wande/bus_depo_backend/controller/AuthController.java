@@ -62,10 +62,10 @@ public class AuthController {
 
             ResponseCookie cookie = ResponseCookie.from("JWT", token)
                     .httpOnly(true)
-                    .secure(false)
+                    .secure(true)
                     .maxAge(30 * 24 * 60 * 60)
                     .path("/")
-                    .sameSite("Strict")
+                    .sameSite("None")
                     .build();
             response.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
             return ResponseEntity.ok(Map.of("Message", "Login Successful"));
@@ -94,9 +94,9 @@ public class AuthController {
         ResponseCookie deleteCookie = ResponseCookie
                 .from("JWT", "") // empty value
                 .httpOnly(true)
-                .secure(false) // ← MUST match login (login uses secure(false))
+                .secure(true) // ← MUST match login (login uses secure(false))
                 .path("/") // ← MUST match login
-                .sameSite("Strict") // ← MUST match login (login uses Strict)
+                .sameSite("None") // ← MUST match login (login uses Strict)
                 .maxAge(0) // 0 = delete immediately
                 .build();
 
