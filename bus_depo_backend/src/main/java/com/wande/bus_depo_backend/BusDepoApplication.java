@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EntityScan("com.wande.bus_depo_backend.model")
+@EnableJpaRepositories("com.wande.bus_depo_backend.repo")
 public class BusDepoApplication {
 
 	public static void main(String[] args) {
