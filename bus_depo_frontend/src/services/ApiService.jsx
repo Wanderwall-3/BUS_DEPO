@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = `http://${window.location.hostname}:8080`;
+const BASE_URL ="https://bus-depo-12.onrender.com";
 
 export const loginApi = (data) =>
   axios.post(`${BASE_URL}/auth/login`, data, { withCredentials: true });
