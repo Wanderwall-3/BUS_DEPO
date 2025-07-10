@@ -16,3 +16,7 @@ RUN mvn clean package -DskipTests
 
 # Run the app
 CMD ["java", "-jar", "target/bus_depo_backend-0.0.1-SNAPSHOT.jar"]
+
+
+# DEBUG: try printing before FROM
+RUN echo "Starting build..."
