@@ -5,7 +5,7 @@ FROM maven:3.9.4-eclipse-temurin-21
 WORKDIR /app
 
 # Copy pom.xml and download dependencies
-COPY pom.xml .
+COPY ./pom.xml .
 RUN mvn dependency:go-offline
 
 # Copy rest of the project
