@@ -1,0 +1,11 @@
+# Node frontend
+node_modules/
+dist/
+
+# Java backend
+target/
+*.jar
+
+# Other
+.env
+.DS_Store

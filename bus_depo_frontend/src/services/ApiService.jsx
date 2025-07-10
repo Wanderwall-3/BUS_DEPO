@@ -64,3 +64,7 @@ export const uploadStudentProfileApi = (file) => {
     },
   });
 }
+
+export const searchRouteApi = (stop,time) => {
+  return axios.get(`${BASE_URL}/student/search`,{params : {stop,time},withCredentials : true})
+}

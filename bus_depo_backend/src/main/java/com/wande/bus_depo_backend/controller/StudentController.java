@@ -1,6 +1,9 @@
 package com.wande.bus_depo_backend.controller;
 
 
+import java.time.LocalTime;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.wande.bus_depo_backend.model.RouteModel;
 import com.wande.bus_depo_backend.model.StudentModel;
 import com.wande.bus_depo_backend.service.StudentService;
 
@@ -35,6 +39,9 @@ public class StudentController {
     public StudentModel getDetails(HttpServletRequest request) {
         return studentService.getDetails(request);
     }
-    
 
+    @GetMapping("/search")
+    public List<RouteModel> getMethodName(HttpServletRequest request,@RequestParam String stop,@RequestParam LocalTime time) {
+        return studentService.search(request, stop, time);
+    }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -19,6 +20,7 @@ import lombok.Data;
 
 import lombok.NoArgsConstructor;
 
+@JsonIgnoreProperties(value = { "routeModel" })
 @Entity
 @Data
 @AllArgsConstructor
@@ -53,7 +55,7 @@ public class DriverModel {
     // private String route;
 
     @OneToMany(mappedBy = "driverModel", cascade = CascadeType.REMOVE, orphanRemoval = true)
-    @JsonManagedReference("driver-route")
+    // @JsonBackReference("driver-route") 
     private List<RouteModel> routeModel;
 
 }

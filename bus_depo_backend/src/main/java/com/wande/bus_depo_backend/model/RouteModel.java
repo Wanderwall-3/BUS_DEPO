@@ -4,6 +4,7 @@ import java.time.LocalTime;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -36,6 +37,6 @@ public class RouteModel {
 
     @ManyToOne
     @JoinColumn(name = "user_name",referencedColumnName = "user_name",insertable = false,updatable = false)
-    @JsonBackReference("driver-route")
+    @JsonManagedReference("driver-route") 
     private DriverModel driverModel;
 }
