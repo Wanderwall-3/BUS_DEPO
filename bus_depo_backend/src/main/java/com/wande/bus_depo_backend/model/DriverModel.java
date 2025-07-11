@@ -20,7 +20,7 @@ import lombok.Data;
 
 import lombok.NoArgsConstructor;
 
-@JsonIgnoreProperties(value = { "routeModel" })
+// @JsonIgnoreProperties(value = { "routeModel" })
 @Entity
 @Data
 @AllArgsConstructor
@@ -55,7 +55,7 @@ public class DriverModel {
     // private String route;
 
     @OneToMany(mappedBy = "driverModel", cascade = CascadeType.REMOVE, orphanRemoval = true)
-    // @JsonBackReference("driver-route") 
+    @JsonBackReference("driver-route") 
     private List<RouteModel> routeModel;
 
 }
