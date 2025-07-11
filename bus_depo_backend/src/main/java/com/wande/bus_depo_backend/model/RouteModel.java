@@ -38,5 +38,6 @@ public class RouteModel {
     @ManyToOne
     @JoinColumn(name = "user_name",referencedColumnName = "user_name",insertable = false,updatable = false)
     @JsonManagedReference("driver-route") 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private DriverModel driverModel;
 }
