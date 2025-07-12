@@ -47,8 +47,31 @@ src/ ├── config/ # App & security configuration ├── controller/ # RE
 
 [![Watch Demo](https://img.youtube.com/vi/pCQ0eZmoRsc/hqdefault.jpg)](https://youtu.be/pCQ0eZmoRsc)
 
+## 🌐 Live Site
+
 📦 [Live Site](https://busdepo.netlify.app/)  
+*Note: The backend is hosted on Render's free tier, so the **first request might take a few minutes to spin up**. Please be patient 🙏*
+
+---
+
+## 🔐 Test Credentials
+
+### 👨‍💼 Admin Portal
+- **Username**: `vignesh`
+- **Password**: `password1`
+
+### 🧑‍🔧 Driver Portal
+- **Username**: `sathis`
+- **Password**: `password1`
+
+### 🧑‍🎓 Student Portal
+- **Username**: `taha`
+- **Password**: `password1`
+
+---
+
 📁 [GitHub Repo](https://github.com/Wanderwall-3/BUS_DEPO)
+
 
 ---
 
